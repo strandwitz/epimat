@@ -2458,6 +2458,10 @@ class Image_Matches:
                                        SMX, SMY, DA, Z_trans, RMV, is_film):
         print("VCC",vecs_cc, "RRA",RRA, "SMX",SMX, "SMY",SMY,
               "DA",DA, "ZT",Z_trans, "RMV",RMV)
+        # points: chunk xyzs in a list [[x,y,z],[x2,y2,z2]] real space, vecs_cc: cartesian coord vectors (unknown which vectors),
+        # RRA :rotated representative atoms two vectors [v1,v2,3], SMX and SMY are both ints, minimum distance to include the entire area match,
+        # DA: disp angle, angle between rotated match vectors; single float, Z_trans: z translation length, single float; RMV: rotated miller vectors [x,y,z];
+        # is_film: True if the points entering represent the film, bollean True/False
         '''
         Makes an extended lattice in the x and y dimensions. The periodicity
         of the crystal face is preserved by using the rotated characteristic
